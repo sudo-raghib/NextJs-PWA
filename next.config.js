@@ -1,20 +1,36 @@
 /** @type {import('next').NextConfig} */
+const withPWAInit = require("next-pwa");
+
+const isDev = process.env.NODE_ENV !== "production";
 
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV !== "development",
+    removeConsole: !isDev,
   },
 };
 
-const withPWA = require("next-pwa")({
+const withPWA = withPWAInit({
   dest: "public",
   sw: "sw.js",
-  disable: process.env.NODE_ENV === "development",
+  disable: isDev,
   register: true,
   skipWaiting: true,
-	buildExcludes: [/middleware-manifest.json$/]
+  exclude: [
+    ({ asset, compilation }) => {
+      if (
+        asset.name.startsWith("server/") ||
+        asset.name.match(/^((app-|^)build-manifest\.json|react-loadable-manifest\.json)$/)
+      ) {
+        return true;
+      }
+      if (isDev && !asset.name.startsWith("static/runtime/")) {
+        return true;
+      }
+      return false;
+    }
+  ],
 });
 
 module.exports = withPWA(nextConfig);
