@@ -1,0 +1,21 @@
+{
+  "name": "Digilab assignment",
+  "short_name": "Digilab",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "icons/LargeTile.scale-150.png",
+      "sizes": "71x71"
+    },
+    {
+      "src": "icons/small.scale-64.png",
+      "sizes": "64x64"
+    }
+  ],
+  "splash_pages": null
+}

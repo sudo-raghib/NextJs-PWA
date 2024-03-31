@@ -1,0 +1,51 @@
+.custom-ring:nth-child(1) {
+  width: 90%;
+}
+
+.custom-ring:nth-child(2) {
+  width: 70%;
+}
+
+.custom-ring:nth-child(3) {
+  width: 50%;
+}
+
+.custom-ring:nth-child(4) {
+  width: 35%;
+}
+
+@media (min-width: 768px) {
+  .custom-ring:nth-child(1) {
+    width: 60%;
+  }
+
+  .custom-ring:nth-child(2) {
+    width: 50%;
+  }
+
+  .custom-ring:nth-child(3) {
+    width: 40%;
+  }
+
+  .custom-ring:nth-child(4) {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-ring:nth-child(1) {
+    width: 30%;
+  }
+
+  .custom-ring:nth-child(2) {
+    width: 25%;
+  }
+
+  .custom-ring:nth-child(3) {
+    width: 20%;
+  }
+
+  .custom-ring:nth-child(4) {
+    width: 15%;
+  }
+}
