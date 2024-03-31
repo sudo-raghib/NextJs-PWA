@@ -13,9 +13,10 @@ pnpm dev
 # or
 bun dev
 ```
-## external packages used
+## External Packages
 1. `next-PWA` :To add PWA support in nextapp
 2. `web-push` : To add notification support
 3. `tailwind-css` : Utility first CSS framework
 
+> Note: Refer `.env.example` for all the environment variables used in the application. 
 
