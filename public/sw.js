@@ -5,7 +5,7 @@ self.addEventListener("push", (event) => {
   
     const notificationOptions = {
       body: message,
-      icon: "/windows11/LargeTile.scale-100.png",
+      icon: "/LargeTile.scale-150.png",
     };
   
     self.registration.showNotification(title, notificationOptions);
