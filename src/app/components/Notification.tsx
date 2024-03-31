@@ -30,7 +30,7 @@ export function Notification() {
     if ("serviceWorker" in navigator) {
       const handleServiceWorker = async () => {
         try {
-          const register = await navigator.serviceWorker.register("/sw.js");
+          const register = await navigator.serviceWorker.ready;
 
           const subscription = await register.pushManager.subscribe({
             userVisibleOnly: true,
