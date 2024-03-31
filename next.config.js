@@ -6,14 +6,11 @@ const isDev = process.env.NODE_ENV !== "production";
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  compiler: {
-    removeConsole: !isDev,
-  },
 };
 
 const withPWA = withPWAInit({
   dest: "public",
-  sw: "sw.js",
+  sw: "service-worker.js",
   disable: isDev,
   register: true,
   skipWaiting: true,
